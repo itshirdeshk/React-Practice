@@ -7,9 +7,21 @@ function App() {
 
   function addValue() {
     if (counter + 1 <= 20) {
-      counter = counter + 1;
-      setCounter(counter);
-      console.log(counter);
+      // counter = counter + 1; 
+      // What if we use setCounter four times,
+      // then it only updates the value of counter by one beacuse useState works in batches
+
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      
+      // Also we want to do this then setCounter provides us a callback in which we get prev value of the variable and if we increase this prev value then we can do this.
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      // console.log(counter);
     }
   }
 
