@@ -52,13 +52,13 @@ function SignUp() {
                 <div className='space-y-5'>
                     <Input
                         label="Name"
-                        placeHolder="Enter your Name"
+                        placeholder="Enter your Name"
                         type="text"
                         {...register("name", { required: true })}
                     />
                     <Input
                         label="Email: "
-                        placeHolder="Enter your Email"
+                        placeholder="Enter your Email"
                         type="email"
                         {...register("email", {
                             required: true,
